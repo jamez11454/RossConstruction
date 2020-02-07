@@ -9,14 +9,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light stick-top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img src={{url('/img/logo.png')}} width="" height="" alt=""/></a>
+		<a class="navbar-brand" href="#"><img src={{url('/img/logo.jpg')}} width="" height="" alt=""/></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -35,7 +35,7 @@
 					<a class="nav-link" href="#">Team</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Connect</a>
+					<a class="nav-link" href="#">Contact Us</a>
 				</li>
 
 	</div>
@@ -50,19 +50,19 @@
 	</ul>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src={{url('/img/background.png')}} width="" height="" alt=""/>
+			<img src={{url('/img/roofing-1.jpg')}} width="" height="" alt=""/>
 			<div class="carousel-caption">
-				<h1 class="display-2">bootstrap</h1>
-				<h3>complete website layout</h3>
-				<button type="button" class="btn btn-outline-light btn-lg">view demo </button>
-				<button type="button" class="btn btn-primary btn-lg">Get Started </button>
+				<h1 class="display-2">RossCo</h1>
+				<h3>Construction services</h3>
+				<button type="button" class="btn btn-outline-light btn-lg">View Gallery</button>
+				<button type="button" class="btn btn-primary btn-lg">Get Booked in</button>
 			</div>
 		</div>
 		<div class="carousel-item">
-			<img src={{url('/img/background2.png')}} width="" height="" alt=""/>
+			<img src={{url('/img/roofing-2.jpg')}} width="" height="" alt=""/>
 		</div>
 		<div class="carousel-item">
-			<img src={{url('/img/background3.png')}} width="" height="" alt=""/>
+			<img src={{url('/img/roofing-3.jpg')}} width="" height="" alt=""/>
 		</div>
 	</div>
 </div>
@@ -88,32 +88,11 @@
 		</div>
 		<hr>
 		<div class="col-12">
-			<p class="lead">welcome to my website</p>
+			<p class="lead">welcome to my website {{ $name }}</p>
 		</div>
 	</div>
 </div>
-
-<!--- Three Column Section -->
-<div class="container-fluid padding">
-	<div class="row text-center padding">
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fas fa-code"></i>
-			<h3>html5</h3>
-			<p>some text to go in here</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fas fa-bold"></i>
-			<h3>bootstrap</h3>
-			<p>some text to go in here</p>
-		</div>
-		<div class="col-xs-12 col-md-4">
-			<i class="fab fa-css3"></i>
-			<h3>css3</h3>
-			<p>some text to go in here</p>
-		</div>
-	</div>
-	<hr class="my-4">
-</div>
+<hr class="my-4">
 
 <!--- Two Column Section -->
 <div class="container-fluid padding">
@@ -139,30 +118,7 @@
 		</div>
 	</div>
 </figure>
-
-<!--- Emoji Section -->
-<button class="fun" data-toggle="collapse" data-target="#emoji">hi there</button>
-<div id="emoji" class="collapse">
-	<div class="container-fluid padding">
-		<div class="row text-center">
-			<div class="col-sm-6 col-md-3">
-				<img class="gif" src={{url('/img/gif/panda.gif')}}>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<img class="gif" src={{url('/img/gif/poo.gif')}}>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<img class="gif" src={{url('/img/gif/unicorn.gif')}}>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<img class="gif" src={{url('/img/gif/chicken.gif')}}>
-			</div>
-
-
-		</div>
-	</div>
-</div>
-  
+ 
 <!--- Meet the team -->
 <div class="container-fluid padding">
 	<div class="row welcome text-center">
@@ -212,14 +168,14 @@
 <!--- Two Column Section -->
 <div class="container-fluid padding">
 	<div class="row padding">
-		<div class="col-lg-6">
-			<h2>if you build it</h2>
+		<div class="col-sm-12 col-lg-6">
+			<h2>if you want it built, we can do it.</h2>
 			<p>here is some information to fill the gap here is some information to fill the gap here is some information to fill the gap here is some information to fill the gap </p>
 			<p>some more information to fill the gap </p>
 			<br>
 		</div>
-		<div class="col-lg-6">
-			<img class="img-fluid" src={{url('/img/bootstrap2.png')}}>
+		<div class="col-sm-12 col-lg-6">
+			<img class="img-fluid" src={{url('/img/desk-2.jpg')}}>
 		</div>
 	</div>
 </div>
@@ -244,9 +200,10 @@
 <!--- Footer -->
 <footer>
 	<div class="container-fluid padding">
-		<div class="row text-enter">
+		<div class="row text-center">
 			<div class="col-md-4">
-				<img src={{url('/img/w3newbie.png')}}>
+				<hr class="light">
+				<h5>our hours</h5>
 				<hr class="light">
 				<p>stuff</p>
 				<p>stuff2</p>
